@@ -193,6 +193,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.blackiron.settings.BlackironSettings;
+import com.blackiron.settings.fragments.SmartPixels;
 
 public class SettingsGateway {
 
@@ -373,8 +374,8 @@ public class SettingsGateway {
             RegionalPreferencesEntriesFragment.class.getName(),
             BatteryInfoFragment.class.getName(),
             UserAspectRatioDetails.class.getName(),
-            ScreenTimeoutSettings.class.getName(),
-            BlackironSettings.class.getName()
+            BlackironSettings.class.getName(),
+            SmartPixels.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -422,5 +423,6 @@ public class SettingsGateway {
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.BlackironSettingsActivity.class.getName(),
+            Settings.SmartPixelsActivity.class.getName(),
     };
             }
