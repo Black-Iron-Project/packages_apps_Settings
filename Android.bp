@@ -66,7 +66,8 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
-        "BlackironSettings/res"
+        "BlackironSettings/res",
+        "TouchGestures/res"
     ],
 
     static_libs: [
