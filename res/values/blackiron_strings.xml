@@ -488,4 +488,8 @@
 
     <!-- Summary for list to control apps that ignore battery saving restrictions -->
     <string name="high_power_apps_summary">Battery optimization availability</string>
+
+
+    <!-- Refresh rate -->
+    <string name="refresh_rate_title">Screen refresh rate</string>
 </resources>
