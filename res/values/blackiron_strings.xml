@@ -11,4 +11,7 @@
 
     <!-- WiFi Hotspot -->
     <string name="wifi_hotspot_ap_band_title">AP Band</string>
+
+    <!-- Blackiron maintainer -->
+    <string name="blackiron_maintainer_title">Device maintainer</string>
 </resources>
