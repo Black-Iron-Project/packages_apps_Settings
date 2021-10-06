@@ -12,4 +12,7 @@
     <!-- Circle to search -->
     <string name="search_all_entrypoints_enabled_title">Circle to Search</string>
     <string name="search_all_entrypoints_enabled_summary">Use CTS instead of Google Lens for navbar long press</string>
+
+    <!-- Blackiron maintainer -->
+    <string name="blackiron_maintainer_title">Device maintainer</string>
 </resources>
