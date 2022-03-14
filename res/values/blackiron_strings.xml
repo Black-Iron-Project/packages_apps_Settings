@@ -9,4 +9,6 @@
     <string name="blackiron_settings_dash_title">Black Iron Settings</string>
     <string name="blackiron_settings_summary">Additional features</string>
 
+    <!-- WiFi Hotspot -->
+    <string name="wifi_hotspot_ap_band_title">AP Band</string>
 </resources>
