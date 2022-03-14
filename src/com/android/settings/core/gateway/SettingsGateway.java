@@ -205,6 +205,8 @@ import com.blackiron.settings.BlackironSettings;
 
 import com.blackiron.settings.fragments.ui.SmartPixels;
 
+import con.android.settings.wifi.tether.WifiTetherClientManager;
+
 public class SettingsGateway {
 
     /**
@@ -396,6 +398,7 @@ public class SettingsGateway {
             BlackironSettings.class.getName(),
             RunningServices.class.getName(),
             SmartPixels.class.getName(),
+            WifiTetherClientManager.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
