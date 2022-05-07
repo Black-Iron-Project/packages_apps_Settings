@@ -426,4 +426,8 @@
     <string name="power_menu_panic_title">Panic trigger</string>
     <!-- Text shown for the description of the panic option -->
     <string name="power_menu_panic_summary">Activates an emergency panic trigger.</string>
+
+    <!-- Mic + Camera indicator -->
+    <string name="mic_camera_indicator_settings_title">Status bar mic and camera indicator</string>
+    <string name="mic_camera_indicator_settings_description">Show indicator when an any app uses mic or camera</string>
 </resources>
