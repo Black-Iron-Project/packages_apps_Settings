@@ -12152,4 +12152,7 @@
     <string name="dock_multi_instances_not_supported_text">"This app can only be opened in 1 window"</string>
 
     <string name="storage_scopes">Storage Scopes</string>
+
+    <string name="allow_access_to_obb_directory_title">Allow access to Android/obb folder</string>
+    <string name="allow_access_to_obb_directory_summary">Required for installation of some large apps (mostly games) that use OBB expansion files</string>
 </resources>
