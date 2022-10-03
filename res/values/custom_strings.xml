@@ -155,4 +155,10 @@
     <string name="hide_from_launcher_summary">
         Prevent this application from showing up in launcher. Requires a launcher restart for changes to take effect.
     </string>
+
+    <!-- BLKI  maintainer in About phone -->
+    <string name="blki_maintainer">Maintainer</string>
+    <string name="blki_maintainer_name" translatable="false">maintainer</string>
+    <string name="blki_maintainer_group" translatable="false">https://t.me/maintainer_group</string>
+
 </resources>
