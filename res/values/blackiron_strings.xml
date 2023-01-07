@@ -505,4 +505,9 @@
     <string name="qs_rows_landscape_title">Rows (landscape)</string>
     <string name="qs_columns_portrait_title">Columns (portrait)</string>
     <string name="qs_columns_landscape_title">Columns (landscape)</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 </resources>
