@@ -5,6 +5,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <string name="disabled">Disabled</string>
+
     <!-- Black Iron Settings -->
     <string name="blackiron_settings_dash_title">Black Iron Settings</string>
     <string name="blackiron_settings_summary">Additional features</string>
