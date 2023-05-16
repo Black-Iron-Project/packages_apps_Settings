@@ -158,7 +158,7 @@
 
     <!-- BLKI  maintainer in About phone -->
     <string name="blki_maintainer">Maintainer</string>
-    <string name="blki_maintainer_name" translatable="false">maintainer</string>
-    <string name="blki_maintainer_group" translatable="false">https://t.me/maintainer_group</string>
+    <string name="blki_maintainer_name" translatable="false">BlkI Teams</string>
+    <string name="blki_maintainer_group" translatable="false">https://t.me/BlackIronProject</string>
 
 </resources>
