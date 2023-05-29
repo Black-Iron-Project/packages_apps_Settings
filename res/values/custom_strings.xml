@@ -166,4 +166,6 @@
     <string name="blki_maintainer_name" translatable="false">BlkI Teams</string>
     <string name="blki_maintainer_group" translatable="false">https://t.me/BlackIronProject</string>
 
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
 </resources>
