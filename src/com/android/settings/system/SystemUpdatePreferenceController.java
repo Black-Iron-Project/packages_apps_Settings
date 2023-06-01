@@ -17,6 +17,7 @@ package com.android.settings.system;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.UserManager;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
@@ -47,7 +48,7 @@ public class SystemUpdatePreferenceController extends BasePreferenceController {
     @Override
     public int getAvailabilityStatus() {
         String buildtype = SystemProperties.get(OTA_BUILD_TYPE_PROP,"unofficial");
-        if (!mUm.isAdminUser() || (!buildtype.equalsIgnoreCase("official") && !buildtype.equalsIgnoreCase("ci"))){
+        if (!mUm.isAdminUser() || !buildtype.equalsIgnoreCase("official")){
             return UNSUPPORTED_ON_DEVICE;
         }
         try {
