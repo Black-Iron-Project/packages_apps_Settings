@@ -54,4 +54,9 @@
 
     <!-- Screenshot shutter -->
     <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+
+    <!-- Black Iron Settings -->
+    <string name="blackiron_settings_dash_title">Black Iron Settings</string>
+    <string name="blackiron_settings_summary">Additional features</string>
+
 </resources>
