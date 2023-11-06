@@ -14,10 +14,10 @@
  * limitations under the License
  */
 
-package com.android.settings.derp.touch;
+package com.android.settings.blackiron.touch;
 
 import android.content.Context;
-import com.android.internal.derp.hardware.LineageHardwareManager;
+import com.android.internal.blackiron.hardware.LineageHardwareManager;
 import com.android.settings.core.BasePreferenceController;
 
 public class HighTouchPollingRateSettingsPreferenceController extends BasePreferenceController {
