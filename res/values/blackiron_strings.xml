@@ -414,9 +414,9 @@
     <!-- Summary text for screen off UDFPS [CHAR LIMIT=NONE]-->
     <string name="ambient_display_screen_off_udfps_summary">To wake up your screen and unlock, long press your under-display fingerprint sensor.</string>
 
-    <!-- Black theme for dark mode -->
-    <string name="berry_black_theme_title">Pure black</string>
-    <string name="berry_black_theme_summary">Pure black background for dark theme</string>
+    <!-- Black theme -->
+    <string name="system_black_theme_title">Use black theme</string>
+    <string name="system_black_theme_summary">Force black background colors</string>
 
     <!-- Heads up -->
     <string name="heads_up_title">Heads-up</string>

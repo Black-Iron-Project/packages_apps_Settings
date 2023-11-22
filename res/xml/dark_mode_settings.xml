@@ -63,10 +63,9 @@
         settings:controller="com.android.settings.display.darkmode.DarkModeCustomBedtimePreferenceController" />
 
     <org.blackiron.support.preferences.SecureSettingSwitchPreference
-        android:key="berry_black_theme"
+        android:key="system_black_theme"
         android:dependency="dark_ui_activated"
-        android:title="@string/berry_black_theme_title"
-        android:summary="@string/berry_black_theme_summary"
-        android:defaultValue="false"
-        settings:requiresPackage="org.blackiron.overlay.customization.blacktheme" />
+        android:title="@string/system_black_theme_title"
+        android:summary="@string/system_black_theme_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>
