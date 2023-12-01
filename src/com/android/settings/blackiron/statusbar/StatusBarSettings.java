@@ -45,12 +45,8 @@ import java.util.Set;
 public class StatusBarSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String CATEGORY_CLOCK = "status_bar_clock_key";
-
     private static final String ICON_BLACKLIST = "icon_blacklist";
 
-    private static final String STATUS_BAR_CLOCK = "status_bar_clock";
-    private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
 
     private static final int PULLDOWN_DIR_NONE = 0;
@@ -58,10 +54,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final int PULLDOWN_DIR_LEFT = 2;
 
     private SystemSettingListPreference mQuickPulldown;
-    private SecureSettingListPreference mStatusBarClock;
     private SecureSettingListPreference mStatusBarAmPm;
-
-    private PreferenceCategory mStatusBarClockCategory;
 
     private boolean mHasCenteredCutout;
 
@@ -69,12 +62,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.status_bar_settings);
-
-        mStatusBarAmPm = findPreference(STATUS_BAR_AM_PM);
-        mStatusBarClock = findPreference(STATUS_BAR_CLOCK);
-        mStatusBarClock.setOnPreferenceChangeListener(this);
-
-        mStatusBarClockCategory = getPreferenceScreen().findPreference(CATEGORY_CLOCK);
 
         mQuickPulldown = findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
@@ -89,37 +76,15 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         final String curIconBlacklist = Settings.Secure.getString(getContext().getContentResolver(),
                 ICON_BLACKLIST);
 
-        if (TextUtils.delimitedStringContains(curIconBlacklist, ',', "clock")) {
-            getPreferenceScreen().removePreference(mStatusBarClockCategory);
-        } else {
-            getPreferenceScreen().addPreference(mStatusBarClockCategory);
-        }
-
         if (DateFormat.is24HourFormat(getActivity())) {
             mStatusBarAmPm.setEnabled(false);
-            mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_info);
         }
 
         final boolean disallowCenteredClock = mHasCenteredCutout;
 
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
-            if (disallowCenteredClock) {
-                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_notch_rtl);
-                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_notch_rtl);
-            } else {
-                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
-                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
-            }
             mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries_rtl);
-        } else {
-            if (disallowCenteredClock) {
-                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_notch);
-                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_notch);
-            } else {
-                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries);
-                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values);
-            }
             mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries);
         }
     }
@@ -132,9 +97,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             case STATUS_BAR_QUICK_QS_PULLDOWN:
                 updateQuickPulldownSummary(value);
                 break;
-            case STATUS_BAR_CLOCK:
-                break;
-
         }
         return true;
     }
@@ -157,11 +119,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 break;
         }
         mQuickPulldown.setSummary(summary);
-    }
-
-    private int getClockPosition() {
-        return Settings.Secure.getInt(getActivity().getContentResolver(),
-                STATUS_BAR_CLOCK, 2);
     }
 
     @Override
