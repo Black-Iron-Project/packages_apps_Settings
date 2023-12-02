@@ -42,7 +42,7 @@ public class IntervalSeekBar extends SeekBar {
 
         mMax = seekBarType.getFloat(R.styleable.IntervalSeekBar_maxValue, 1.5f);
         mMin = seekBarType.getFloat(R.styleable.IntervalSeekBar_minValue, 0.5f);
-        mDefault = seekBarType.getFloat(R.styleable.IntervalSeekBar_defaultValue, 1.0f);
+        mDefault = seekBarType.getFloat(R.styleable.IntervalSeekBar_defaultValuePure, 1.0f);
 
         int digits = seekBarType.getInt(R.styleable.IntervalSeekBar_digits, 0);
         mMultiplier = (float) Math.pow(10, digits);
