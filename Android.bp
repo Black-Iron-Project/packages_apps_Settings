@@ -51,7 +51,14 @@ android_library {
         "SpaPrivilegedLib-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: [
+           "src/**/*.java",
+           "src/**/*.kt",
+           "BlackironSettings/src/**/*.java",
+    ],
+
+    aaptflags: ["--extra-packages com.blackiron.settings"],
+
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/shared/**/*.kt",
     ],
@@ -61,7 +68,9 @@ android_library {
         "res-export", // for external usage
         "res-product",
         "TouchGestures/res",
+        "BlackironSettings/res"
     ],
+
     static_libs: [
         // External dependencies
         "androidx.navigation_navigation-fragment-ktx",
@@ -123,6 +132,10 @@ android_library {
         "telephony-common",
         "ims-common",
     ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }
 
 platform_compat_config {
