@@ -53,18 +53,24 @@ android_library {
     ],
 
     srcs: [
-        "src/**/*.java",
-        "src/**/*.kt",
+           "src/**/*.java",
+           "src/**/*.kt",
+           "BlackironSettings/src/**/*.java",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
     ],
+
+    aaptflags: ["--extra-packages com.blackiron.settings"],
+
     use_resource_processor: true,
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
+        "BlackironSettings/res"
     ],
+
     static_libs: [
         // External dependencies
         "androidx.navigation_navigation-fragment-ktx",
@@ -132,6 +138,10 @@ android_library {
         "telephony-common",
         "ims-common",
     ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }
 
 platform_compat_config {
