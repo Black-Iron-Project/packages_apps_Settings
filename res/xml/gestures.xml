@@ -85,12 +85,19 @@
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.TapScreenGesturePreferenceController" />
 
-    <Preference
+ <!--   <Preference
         android:key="gesture_double_tap_screen_input_summary"
         android:title="@string/ambient_display_title"
         android:fragment="com.android.settings.gestures.DoubleTapScreenSettings"
         settings:searchable="false"
-        settings:controller="com.android.settings.gestures.DoubleTapScreenPreferenceController" />
+        settings:controller="com.android.settings.gestures.DoubleTapScreenPreferenceController" /> -->
+
+     <Preference
+        android:key="double_tap"
+        android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
+        android:title="@string/doze_double_tap_title"
+        android:summary="@string/doze_double_tap_summary"
+        settings:userRestriction="no_ambient_display" />
 
     <com.android.settingslib.PrimarySwitchPreference
         android:key="gesture_pick_up_input_summary"
@@ -111,13 +118,6 @@
         android:title="@string/power_menu_setting_name"
         android:fragment="com.android.settings.gestures.PowerMenuSettings"
         settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
-
-     <Preference
-        android:key="double_tap"
-        android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
-        android:title="@string/doze_double_tap_title"
-        android:summary="@string/doze_double_tap_summary"
-        settings:userRestriction="no_ambient_display" />
 
     <com.android.settingslib.PrimarySwitchPreference
         android:key="gesture_prevent_ringing_summary"
